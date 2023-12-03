@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: "Oswald";
 }
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
 
 .main-header{
     padding-top: 192px;
@@ -18,7 +22,7 @@
     font-weight: 500;
     text-transform: uppercase;
     font-size: 64px;
-    width: 734px;
+    max-width: 734px;
     text-align: center;
     margin: 0 auto 20px;
     line-height: 94.85px;
@@ -31,12 +35,10 @@
     text-transform: uppercase;
     margin: 0 auto 20px;
     text-align: center;
-    width: 734px;
+    max-width: 734px;
 }
 .medals{
 background-color: #fff;
-width: 1110px;
-margin: 0 auto;
 display: flex;
 justify-content: space-around;
 padding: 57px;
@@ -65,9 +67,10 @@ text-align: center;
 }
 
 .arena-wrapper {
-padding-top: 200px;
-
+margin-top: 200px;
+margin-bottom: 200px;
 }
+
 .arena-wrapper > h3 {
 font-weight: 500;
 font-size: 36px;
@@ -76,22 +79,20 @@ text-align: center;
 margin: 0 auto 20px;
 color: #404149;
 text-transform: uppercase;
-
+margin-bottom: 60px;
 }
+
 .arenas{
 display: flex;
-justify-content: space-around;
-padding: 30px 0;
-margin: 0 auto;
-width: 1100px;
+gap:30px;
 
 }
 .imagine {
-width: 350px;
-height: 380px;
+max-width: 100%;
+
 }
 
-.arenas > article > h4 {
+.arenas  > article >  h4 {
     width: 55px;
     border-top: 6px solid #F7654A;
     padding-top: 15px;
@@ -101,80 +102,82 @@ height: 380px;
     line-height: 35.57px;
 
 }
+.arenas h4{
+    position: relative;
+}
+
+.arenas h4 ::before {
+content: "";
+width: 55px;
+height: 6px;
+background-color: #F7654A;
+position: absolute;
+left: 0;
+top: -15px;
+}
 .arenas > article > p {
 font-family: 'Open Sans';
 font-size: 16px;
 font-weight: 400;
 color:#999999;
 line-height: 21.79px;
-width: 350px;
 margin-top: 20px;
 }
 
-.projects-wrapper{
-    width: 100%;
-    height: 181px;
-    background-color: rgba(247, 101, 74, 1);
-    margin-top: 200px;
-}
-.projects-wrapper > header {
-    display: flex;
-}
 
-.left {
-width: 555px;
-justify-content: flex-start;
-margin-left: 305px;
-
-}
-.right {
-    width: 555px;
-    justify-content: flex-end;
-    margin-right: 0;
-}
-
-.left > h3{
-    width: 537px;
-    font-weight: 700;
-    font-size: 48px;
-    color: rgba(255, 255, 255, 1);
-    line-height: 71.14px;
-    /* margin: 30px 361px 10px 405px; */
-}
-
-.left > h4{
-    width: 537px;
-    font-weight: 700;
-    font-size: 24px;
-    color: rgba(255, 255, 255, 1);
-    line-height: 35.57px;
-    text-transform: uppercase;
-    /* margin: 0 361px 45px 405px; */
-}
-
-.right > button{
-    border: none;
+.projects-main button {
     width: 175px;
     height: 49px;
-    background-color: rgba(255, 255, 255, 1);
-    text-transform: uppercase;
-    font-weight: 500;
     font-size: 14px;
-    line-height: 20.75px;
-    margin: 53px 405px 59px 0;
+    line-height: 20px;
+    border: none;
+    outline: none;
     cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: #fff;
+    text-transform: uppercase;
+    margin-left: auto;
+    align-self: center;
 }
+
+.projects-main button:hover {
+    background-color: bisque;
+}
+
+.projects-wrapper {
+    background-color: #F7654A;
+    color: #fff;
+}
+
+.projects-main {
+    display: flex;
+    padding: 30px;
+}
+
+.projects-main header h3 {
+    font-size: 48px;
+    line-height: 71px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.projects-main header h4 {
+    font-size: 24px;
+    line-height: 45px;
+}
+
 
 .projects-wrapper > header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} 
 
 .cards-wrapper{
     width: 1110px;
     padding-top: 150px;
-    margin-left: 405px;
+
 }
 
 .cards-header{
@@ -191,12 +194,12 @@ margin-left: 305px;
     text-align: center;
 }
 
-.cards{
+.cards {
     margin-top: 66px;
-    display: inline-grid;
-    justify-items: center;
-    grid-template-columns: 350px 350px 350px;
-    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
 }
 
 
@@ -207,7 +210,7 @@ margin-left: 305px;
     text-align: center;
 }
 
-.fa-solid{
+.cards > article > i {
     margin-top: 60px;
     width: 60px;
     height: 40px;
@@ -228,4 +231,173 @@ margin-left: 305px;
     text-align: center;
     text-transform: uppercase;
 }
+.cards1 {
+    margin-top: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
 
+
+.cards1 > article{
+    width: 350px;
+    height: 250px;
+    background-color: rgba(247, 247, 247, 1);
+    text-align: center;
+}
+
+
+.cards1 > article > p{
+    margin-top: 30px;
+    margin-left: 86px;
+    width: 172px;
+    height: 62px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 31.12px;
+    letter-spacing: 2%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.cards1 > article > i {
+    margin-top: 60px;
+    width: 60px;
+    height: 40px;
+    font-size: 48px;
+    line-height: 40.31px;
+    text-align: center;
+}
+.contacts-header {
+    text-align: center;
+    margin-top: 112px;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 500;  
+}
+.contacts-block {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+   
+   }
+.contacts-block > article {
+    width: 255px;
+    /* height: 191px; */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+  
+}
+.contacts > .contacts-header > .contacts-block > article > i {
+    width: 71px;
+   
+}
+.contacts > .contacts-header > .contacts-block > article > h4{
+    text-align: center;
+    color: #999999;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35.57px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.main-footer {
+    background-color: #404149;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 82px;
+    margin-top: 60px;
+  
+}
+ .main-footer > p {
+    font-size: 16px;
+    font-family: "Open Sans";
+    color: #FFFFFF;
+    line-height: 21.79px;
+    font-weight: 400;
+
+ }
+ .main-footer > p:first-child {
+    margin-left: 85px;
+ }
+
+
+@media screen and  (max-width: 750px) {
+
+    .main-header h1 {
+        font-size: 24px;
+        line-height: 36px ;
+    }
+    .main-header h2{
+        font-size: 16px;
+        line-height: 36px ;
+    }
+    .cards {
+        flex-wrap: wrap;
+    }
+    .cards1 {
+        flex-wrap: wrap;
+    }
+    .contacts-block{
+        flex-wrap:wrap;
+    }
+    .main-footer{
+        flex-wrap:wrap;
+    }
+}
+    @media screen and (max-width: 450px) {
+        .medals {
+            flex-wrap: wrap;
+        }
+        .medals header {
+            font-size: 30px;
+            line-height: 35px;
+        }
+        .medals div:nth-child(2){
+            font-size: 20px;
+            line-height: 25px;
+        }
+        .arenas{
+            flex-wrap: wrap;
+        }
+        .arenas article h4 {
+            font-size: 16px;
+        }
+        .arenas article p {
+            font-size: 12px;
+        }
+        .arena-wrapper  h3 {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .projects-main {
+            flex-wrap: wrap;
+        }
+        .projects-main > button {
+        margin-left: 0;
+        flex-basis: 100%;
+        margin-top: 20px;
+        }
+        .cards {
+            flex-wrap: wrap;
+        }
+        .cards1 {
+            flex-wrap: wrap;
+        }
+        .contacts-block{
+            flex-wrap: wrap;
+        }
+        .main-footer{
+            flex-wrap: wrap;
+        }
+    
+    }
+    @media screen and (max-width: 390px){
+        .arenas{
+            flex-wrap: wrap;
+            padding: 15px;
+        }
+    }
